@@ -13,7 +13,11 @@ EINSTEIN = {
 
 einstein_json = json.dumps(EINSTEIN)
 back_to_dict = json.loads(einstein_json)
+
+print(">JSON")
 print(einstein_json)
+
+print(">Dictionary")
 pprint(back_to_dict)
 
 with open("laureates.csv", "r") as f:
@@ -27,6 +31,10 @@ with open("laureates.csv", "r") as f:
 #      my_list.append("something")
 
 laureates_beginning_with_a = []
+for la in laureates:
+    if (la["name"][:1]=="A"):
+        laureates_beginning_with_a.append(la)
+
 # LinkedIn learner code here
 
 

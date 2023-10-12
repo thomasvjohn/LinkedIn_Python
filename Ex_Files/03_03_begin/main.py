@@ -13,7 +13,11 @@ EINSTEIN = {
 
 einstein_json = json.dumps(EINSTEIN)
 back_to_dict = json.loads(einstein_json)
+
+print("JSON")
 print(einstein_json)
+
+print("Dictionary")
 pprint(back_to_dict)
 
 with open("laureates.csv", "r") as f:
